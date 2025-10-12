@@ -1,6 +1,6 @@
 {
   "name": "hexo-filter-updated-from-git",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Hexo plugin that sets post.updated using the last Git commit time.",
   "main": "index.js",
   "keywords": ["hexo", "filter", "updated", "git"],
@@ -8,5 +8,13 @@
   "license": "ISC",
   "engines": {
     "hexo": ">=7.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seekstar/hexo-filter-updated-from-git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seekstar/hexo-filter-updated-from-git/issues"
+  },
+  "homepage": "https://github.com/seekstar/hexo-filter-updated-from-git#readme"
 }
