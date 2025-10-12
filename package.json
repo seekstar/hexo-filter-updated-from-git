@@ -1,0 +1,12 @@
+{
+  "name": "hexo-filter-updated-from-git",
+  "version": "1.0.0",
+  "description": "A Hexo plugin that sets post.updated using the last Git commit time.",
+  "main": "index.js",
+  "keywords": ["hexo", "filter", "updated", "git"],
+  "author": "Jiansheng Qiu",
+  "license": "ISC",
+  "engines": {
+    "hexo": ">=7.3.0"
+  }
+}
