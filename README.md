@@ -11,7 +11,7 @@ npm install hexo-filter-updated-from-git --save
 `_config.yml`:
 
 ```yml
-# If no "updated" in front-matter, then make post.updated undefined.
+# If no "updated" in front-matter, then leave post.updated undefined.
 updated_option: 'empty'
 ```
 
