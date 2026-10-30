@@ -1,4 +1,4 @@
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const path = require('path');
 
 hexo.extend.filter.register('before_post_render', function (post) {
@@ -9,8 +9,10 @@ hexo.extend.filter.register('before_post_render', function (post) {
   try {
     const fullPath = path.join(hexo.source_dir, post.source);
     // Get the last author date in ISO 8601 format
-    const gitTime = execSync(
-      `git log -1 --format=%aI -- "${fullPath}"`,
+    const gitTime = execFileSync(
+      'git',
+      // --literal-pathspecs: file names may contain git pathspec magic (*, ?, [)
+      ['--literal-pathspecs', 'log', '-1', '--format=%aI', '--', fullPath],
       // Return a string instead of a buffer
       { encoding: 'utf8' }
     ).trim();
